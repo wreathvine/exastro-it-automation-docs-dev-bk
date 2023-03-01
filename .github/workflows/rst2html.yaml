@@ -26,11 +26,11 @@ jobs:
 
     - name: Checkout
       run: |
-          git clone git@github.com:${GITHUB_REPOSITORY}.git src -b main
+          git clone git@github.com:${GITHUB_REPOSITORY}.git work -b main
 
     - name: Merge ${{ github.ref_name }} to main
       run: |
-          cd src
+          cd work
           git merge -m "auto merge" origin/${{ github.ref_name }}
 
     - name: Set up Python
@@ -40,24 +40,24 @@ jobs:
 
     - name: Install dependencies
       run: |
-          cd src
+          cd work
           python -m pip install --upgrade pip
           pip install -r docs/requirements.txt
 
     - name: Build
       run: |
-          cd src/docs
+          cd work/src
           rm -rf html
-          make html
+          make html ../docs
 
     - name: Commit
       run: |
-          cd src
+          cd work
           git remote set-url origin git@github.com:${GITHUB_REPOSITORY}.git
           git add -f docs
           git commit -m "auto rebuilding site"
 
     - name: Push
       run: |
-          cd src
+          cd work
           git push origin main
