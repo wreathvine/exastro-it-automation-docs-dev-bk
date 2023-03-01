@@ -42,13 +42,13 @@ jobs:
       run: |
           cd work
           python -m pip install --upgrade pip
-          pip install -r docs/requirements.txt
+          pip install -r src/requirements.txt
 
     - name: Build
       run: |
           cd work/src
           rm -rf html
-          make html ../docs
+          make html
 
     - name: Commit
       run: |
