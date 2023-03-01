@@ -74,6 +74,8 @@ GitHub Pages の設定を行い、コンテンツを公開状態にします。
 
 2. 左メニューから `Pages` をクリックし、`Branch` 項目に `Main` ブランチと `/docs` ディレクトリを選択し、 `Save` ボタンを押下します。
 
+![image](https://user-images.githubusercontent.com/83527822/222101080-539bfe17-8814-48b1-b624-0f99ef4bbc8d.png)
+
 ### コンテンツ自動生成
 
 Exastro IT Automation のドキュメントは reStructuredText 形式で記述されています。
