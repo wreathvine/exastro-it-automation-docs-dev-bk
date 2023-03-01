@@ -1,9 +1,0 @@
-sphinx
-sphinx-autobuild
-rstcheck
-sphinxcontrib-blockdiag
-sphinxcontrib-seqdiag
-sphinxcontrib-actdiag
-sphinxcontrib-nwdiag
-sphinx-copybutton
-sphinx-tabs

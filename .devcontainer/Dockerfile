@@ -51,4 +51,11 @@ RUN curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/s
 
 USER ${USERNAME}
 
+ADD files/talisman_hook_script /home/ubuntu/.talisman/bin/talisman_hook_script
+
+ADD files/talisman_linux_amd64 /home/ubuntu/.talisman/bin/talisman_linux_amd64
+
+RUN mkdir -p /home/sphinx/.git-template/hooks \
+    && ln -s /home/sphinx/.talisman/bin/talisman_hook_script /home/sphinx/.git-template/hooks/pre-commit
+
 WORKDIR /workspace
