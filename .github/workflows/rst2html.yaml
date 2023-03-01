@@ -47,6 +47,7 @@ jobs:
     - name: Build
       run: |
           cd src/docs
+          rm -rf html
           make html
 
     - name: Commit
