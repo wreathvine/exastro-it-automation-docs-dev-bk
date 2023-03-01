@@ -103,9 +103,9 @@ Title は `My Deploy Key` とします。 \
 
 ![image](https://user-images.githubusercontent.com/83527822/207450638-c5e90050-acc5-485f-8011-733b3cceff59.png)
 
-##### 秘密鍵の登録
+##### Secrets (秘密鍵)の登録
 
-秘密鍵は `Settings -> Secrets -> Actions` の `New repository secret` で登録します。 \
+秘密鍵は `Settings -> Secret and variables -> Actions` の `New repository secret` で登録します。 \
 Secret は `MY_ACTIONS_DEPLOY_KEY` という名前で登録します。
 
 ![image](https://user-images.githubusercontent.com/83527822/207450910-d48a2843-2c92-4e20-a0f7-db3290a98d93.png)
